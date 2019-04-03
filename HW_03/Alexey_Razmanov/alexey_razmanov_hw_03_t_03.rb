@@ -2,7 +2,7 @@ require 'date'
 require 'time'
 
 def task_3(string)
-  res = 0
+  res = '0'
   arr = []
   string.each_line do |s|
     arr.push(s) if s.include?('Calling core with action:')
