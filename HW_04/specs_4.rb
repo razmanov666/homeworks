@@ -13,7 +13,7 @@ end
 
 # btw, what are you looking here, huh?
 
-if loaded
+if true
   class TestHW4 < Minitest::Test
     def test_true
       assert_equal true, true
