@@ -1,0 +1,55 @@
+.hw-border {
+  border: 2px solid black;
+}
+
+/*-----> First task classes <-----*/
+.hw-container {
+  /*Add style for position */
+}
+
+.hw-container > .hw-figure {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.hw-container > .hw-figure.hw-square {
+  background-color: green;
+
+  /*Add style for position and transforming */
+}
+
+.hw-container > .hw-figure.hw-circle {
+  background-color: blue;
+
+  /*Add style for position and transforming */
+}
+
+.hw-container > .hw-figure.hw-rhomb {
+  background-color: yellow;
+
+  /*Add style for position and transforming */
+}
+
+/*-----> Second task classes <-----*/
+
+textarea.hw-textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+/*!!!!!!! layout style here !!!!!!!*/
+
+/*---------------------------------*/
+
+/*-----> Third task classes <-----*/
+
+/*!!!!!!! layout style here !!!!!!!*/
+
+/*---------------------------------*/
+
+/*-----> Four task classes <-----*/
+
+/*!!!!!!! layout style here !!!!!!!*/
+
+/*---------------------------------*/
