@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # It is abstract class, which help to projection class Mentor and class Student
 class Human
   attr_reader :name, :surname

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # It is class which create student's homeworks
 class Homework
   attr_accessor :code

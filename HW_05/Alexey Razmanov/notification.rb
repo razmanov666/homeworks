@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class serves for create and works with subject Notification
 class Notification
   attr_accessor :all_notifications

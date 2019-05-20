@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class present student person
 class Student < Human
   attr_accessor :subscribers
