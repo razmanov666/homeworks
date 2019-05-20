@@ -1,12 +1,11 @@
 # Class mentor present objects which must to supervise students
 class Mentor < Human
-  attr_accessor :subscriptions, :subscribers
+  attr_accessor :subscriptions
   attr_reader :notify_mentor
   def initialize(name, surname)
     super(name, surname)
     @subscriptions = []
     @notify_mentor = Notification.new
-    # @subscribers = []
   end
 
   def check_homework(homework)
