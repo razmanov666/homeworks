@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class mentor present objects which must to supervise students
 class Mentor < Human
   attr_accessor :subscriptions
@@ -18,6 +20,7 @@ class Mentor < Human
 
   def subscribe_to_student(person)
     subscriptions.include?(person) ? return : @subscriptions << person
+
     subscriptions.each do |student|
       student.get_subs(self)
     end
