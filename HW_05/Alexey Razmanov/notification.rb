@@ -5,7 +5,14 @@ class Notification
     @all_notifications = []
   end
 
-  def add_notification(pr_title, student)
+  def send_notif_for_mentor
+    all_notifications.each do |note|
+      puts "'#{note[:text]}.'\t Status: #{note[:status]}" if
+      note[:status].eql? 'Unread'
+    end
+  end
+
+  def new_notif(pr_title, student)
     all_notifications << {
       status: 'Unread',
       pr_title: pr_title,

@@ -7,9 +7,30 @@ class Student < Human
   end
 
   def do_homework(code, pr_title, student)
-    hw = Homework.new(code, pr_title, student)
-    hw
+    Homework.new(code, pr_title, student)
   end
+
+  def submit_homework(homework)
+    do_request(homework)
+    send_notification(homework.pr_title)
+  end
+
+  def send_notification(pr_title)
+    subscribers.each do |mentor|
+      mentor.notify_mentor.new_notif(pr_title, self)
+    end
+  end
+
+  def show_subs
+    puts "\nSubscribers:\n\n"
+    puts subscribers
+  end
+
+  def get_subs(person)
+    subscribers.include?(person) ? return : subscribers << person
+  end
+
+  private
 
   def do_request(homework)
     uri = URI.parse('https://example.com/')
@@ -22,24 +43,5 @@ class Student < Human
     request.body = body.to_json
     response = http.request(request)
     response
-  end
-
-  def submit_homework(homework)
-    do_request(homework)
-    send_notification(homework.pr_title)
-  end
-
-  def send_notification(pr_title)
-    subscribers.each do |mentor|
-      mentor.all_notifications.add_notification(pr_title, self)
-    end
-  end
-
-  def show_subs
-    puts subscribers
-  end
-
-  def get_subs(person)
-    subscribers.include?(person) ? return : subscribers << person
   end
 end
